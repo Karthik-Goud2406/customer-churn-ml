@@ -104,5 +104,10 @@ Add batch prediction support
 
 👨‍💻 Author
 Karthik Goud
+![WhatsApp Image 2026-03-23 at 12 47 52 AM](https://github.com/user-attachments/assets/59643039-8d3e-456d-81e7-312d3810b998)
+![WhatsApp Image 2026-03-23 at 12 48 10 AM](https://github.com/user-attachments/assets/1c3d05f4-9b6c-495c-95a7-6da1b6177da3)
+![WhatsApp Image 2026-03-23 at 12 48 37 AM](https://github.com/user-attachments/assets/56c3931d-cbd8-4a3e-8566-3cb021060944)
+
+
 
 GitHub: https://github.com/Karthik-Goud2406
