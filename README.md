@@ -53,6 +53,14 @@ Logistic Regression
 Random Forest
 Gradient Boosting
 XGBoost
+
+📊 Model Performance
+Model	              Accuracy	F1 Score	ROC-AUC
+Logistic Regression 	0.76    	0.59	   0.81
+Random Forest       	0.83  	  0.67	   0.89
+Gradient Boosting	    0.85	    0.71	   0.92
+XGBoost	              0.84	    0.71	   0.91
+
 ✅ Model evaluation using:
 Accuracy
 F1 Score
@@ -109,6 +117,25 @@ Example Response:
   "churn": 0
 }
 
+📁 Project Structure
+customer-churn-ml/
+│
+├── src/
+│   ├── data_preprocessing.py   # Data cleaning & encoding
+│   ├── feature_engineering.py  # Feature creation
+│   ├── train.py                # Model training & saving
+│   └── evaluate.py             # Metrics evaluation
+│
+├── api/
+│   └── app.py                  # FastAPI service
+│
+├── models/
+│   ├── model.pkl               # Trained model
+│   └── columns.pkl             # Feature schema
+│
+├── main.py                     # Pipeline entry point
+├── requirements.txt
+└── README.md
 
 
 💡 What Makes This Project Strong
