@@ -4,6 +4,48 @@
 Built an end-to-end machine learning system to predict customer churn using real-world telecom data.
 The project covers data preprocessing → model training → evaluation → deployment via API, ensuring production-level reliability.
 
+## 📌 Problem Statement
+
+Customer churn is a critical business problem where companies lose customers over time, directly impacting revenue.
+
+The challenge is:
+- Identify customers likely to churn **before they leave**
+- Build a system that can **predict churn in real-time**
+- Ensure the system works reliably in **production environments**
+
+## 🎯 Objective
+
+Design and deploy a **production-ready machine learning system** that:
+- Predicts customer churn accurately
+- Handles real-world data challenges (leakage, inconsistencies)
+- Provides predictions via a scalable API
+
+---
+
+## 🧠 Engineering Challenges Solved
+
+### 🔴 1. Data Leakage (Critical ML Issue)
+- Initial model showed unrealistic performance (~96% accuracy)
+- Identified leakage features like:
+  - `satisfaction_score`
+  - `churn_score`
+- Removed them to ensure **real-world generalization**
+
+✅ Result: Reliable model performance (~0.91 ROC-AUC)
+
+---
+
+### 🔴 2. Training vs Inference Mismatch
+- Model trained on encoded features (~100+ columns)
+- API received raw input (few fields)
+- Caused prediction failures (500 errors)
+
+✅ Solution:
+- Saved training feature schema (`columns.pkl`)
+- Aligned input using:
+  python
+df = df.reindex(columns=columns, fill_value=0)
+
 ⚙️ Key Features
 ✅ Data preprocessing & feature engineering pipeline
 ✅ Multiple ML models:
@@ -38,12 +80,7 @@ Models: XGBoost, Gradient Boosting
 Deployment: FastAPI
 Serialization: Joblib
 
-📊 Model Performance
-Model	Accuracy	F1 Score	ROC-AUC
-Logistic Regression	~0.76	~0.59	~0.81
-Random Forest	~0.83	~0.67	~0.89
-Gradient Boosting	~0.85	~0.71	~0.92
-XGBoost	~0.84	~0.71	~0.91
+
 
 👉 Final Model Used: Gradient Boosting (best balance of performance)
 
@@ -73,24 +110,6 @@ Example Response:
 }
 
 
-📁 Project Structure
-customer-churn-ml/
-├── src/
-│   ├── data_preprocessing.py
-│   ├── feature_engineering.py
-│   ├── train.py
-│   └── evaluate.py
-│
-├── api/
-│   └── app.py
-│
-├── models/
-│   ├── model.pkl
-│   └── columns.pkl
-│
-├── main.py
-├── requirements.txt
-└── README.md
 
 💡 What Makes This Project Strong
 ✔ End-to-end ML pipeline (not just notebook)
