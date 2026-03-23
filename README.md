@@ -71,6 +71,8 @@ Example Response:
 {
   "churn": 0
 }
+
+
 📁 Project Structure
 customer-churn-ml/
 ├── src/
@@ -89,12 +91,14 @@ customer-churn-ml/
 ├── main.py
 ├── requirements.txt
 └── README.md
+
 💡 What Makes This Project Strong
 ✔ End-to-end ML pipeline (not just notebook)
 ✔ Real-world problem handling (data leakage, inference mismatch)
 ✔ Deployment-ready API
 ✔ Clean, modular code structure
 ✔ Industry-relevant tools (FastAPI, XGBoost)
+
 🎯 Future Improvements
 Add Streamlit dashboard for visualization
 Deploy on AWS / Render for public access
