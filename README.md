@@ -117,25 +117,6 @@ Example Response:
   "churn": 0
 }
 
-📁 Project Structure
-customer-churn-ml/
-│
-├── src/
-│   ├── data_preprocessing.py   # Data cleaning & encoding
-│   ├── feature_engineering.py  # Feature creation
-│   ├── train.py                # Model training & saving
-│   └── evaluate.py             # Metrics evaluation
-│
-├── api/
-│   └── app.py                  # FastAPI service
-│
-├── models/
-│   ├── model.pkl               # Trained model
-│   └── columns.pkl             # Feature schema
-│
-├── main.py                     # Pipeline entry point
-├── requirements.txt
-└── README.md
 
 
 💡 What Makes This Project Strong
